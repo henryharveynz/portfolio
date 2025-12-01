@@ -1,0 +1,209 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -Helvetica, apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    /*font-family: Georgia, 'Times New Roman', serif;*/
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background-color: #ededed;
+    padding: 1.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+nav li img {
+    height: 3em; /* matches text height */
+    width: auto;
+    vertical-align: middle;
+
+}
+
+
+nav a:hover,
+nav a.active {
+    color: #666;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px; /*Original was 1200*/
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: #ddd;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-overlay h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-card:hover img {
+    opacity: 0.95;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Project Detail Page */
+.project-detail h1 {
+    margin-bottom: 1rem;
+}
+
+.project-detail p {
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.project-image {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* For side-by-side images if needed */
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.image-row img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* About and Contact Pages */
+.content-page {
+    max-width: 800px;
+}
+
+.content-page h1 {
+    margin-bottom: 1.5rem;
+}
+
+.content-page p {
+    margin-bottom: 1rem;
+}
+
+.contact-email {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.contact-email a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 2px solid #333;
+}
+
+.contact-email a:hover {
+    color: #666;
+    border-bottom-color: #666;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .image-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-overlay h2 {
+        font-size: 1.2rem;
+    }
+}
