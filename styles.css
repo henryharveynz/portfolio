@@ -15,7 +15,7 @@ body {
 
 /* Navigation */
 nav {
-    background-color: #ededed;
+    background-color: #ffffff;
     padding: 1.5rem 0;
 }
 
@@ -60,6 +60,9 @@ h1 {
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: 300;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Project Grid */
@@ -121,8 +124,10 @@ h1 {
 }
 
 .project-detail p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-image {
@@ -205,5 +210,23 @@ h1 {
 
     .project-overlay h2 {
         font-size: 1.2rem;
+    }
+}
+
+/* Henry added columns*/
+.two-column-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .two-column-text {
+        grid-template-columns: 1fr;
+        
     }
 }
